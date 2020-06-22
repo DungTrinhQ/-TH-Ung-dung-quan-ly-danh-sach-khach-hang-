@@ -53,7 +53,7 @@ public class HibernateCustomerServiceImpl implements CustomerService {
             origin.setName(customer.getName());
             origin.setEmail(customer.getEmail());
             origin.setAddress(customer.getAddress());
-            session.save(origin);
+            session.saveOrUpdate(origin);
             transaction.commit();
             return origin;
         } catch (Exception e) {

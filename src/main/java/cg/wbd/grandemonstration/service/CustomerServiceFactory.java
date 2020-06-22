@@ -1,5 +1,6 @@
 package cg.wbd.grandemonstration.service;
 
+import cg.wbd.grandemonstration.service.impl.HibernateCustomerServiceImpl;
 import cg.wbd.grandemonstration.service.impl.SimpleCustomerServiceImpl;
 
 public class CustomerServiceFactory {
@@ -8,6 +9,7 @@ public class CustomerServiceFactory {
     public static synchronized CustomerService getInstance() {
         if (singleton == null) {
             singleton = new SimpleCustomerServiceImpl();
+
         }
         return singleton;
     }
